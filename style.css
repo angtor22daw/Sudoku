@@ -1,0 +1,188 @@
+/* CSS DE index.html, és a dir, pàgina d'inici */
+body{
+    background-color: #fdecec;
+    height: 100%;
+    
+}
+
+article {
+    margin: 5em auto 0;
+    padding: 1em;
+    max-width: 800px;
+    background: white;
+    border-radius: 1%;
+    box-shadow: 0 0 5px 1px rgb(105, 89, 89);
+}
+.headerTop{
+    width: 100%;
+    top: 0;
+    left: 0;
+    height: 70px;
+    position: fixed;
+    background: rgb(204, 8, 8);
+    font-size: 50px;
+    font-family: "Arial";
+    text-align: center;
+    color: rgb(255, 255, 255);
+
+}
+h1 {
+    font-family: "Arial";
+    text-align: center;
+    font-size: 50px;
+    color: rgb(0, 0, 0);
+}
+
+h2 {
+    font-family: "Courier";
+    text-align: center;
+    font-size: 25px;
+    color: rgb(255, 0, 0);
+}
+
+#descripcio{
+    text-align: justify;
+    font-size: 20px;
+    padding: 10px;
+    padding-bottom: 50px;
+    padding-left: 50px;
+    padding-right: 50px;
+    color: #000000;
+}
+#imgInici{
+    display:block;
+    margin: auto;
+}
+
+.generarJoc{
+    margin: auto;
+    width:150px;
+    height:30px;
+    background:rgb(204, 8, 8);
+    border-radius:10px;
+    color: white;
+    float: center;
+}
+.inici{
+    margin: auto;
+    align-self: flex-start;
+    width:150px;
+    height:30px;
+    background:rgb(204, 8, 8);
+    border-radius:10px;
+    color: white;
+    float: left;
+
+}
+
+.començar{
+    width:150px;
+    height:30px;
+    background:rgb(204, 8, 8);
+    border-radius:10px;
+    color: white;
+    margin-left: 40%;
+}
+
+
+p{
+    text-align: center;
+    font-size: 40px;
+    color: rgb(204, 8, 8);
+    font-weight: bold;
+}
+
+footer {
+    width: 100%;
+    position: static;
+    bottom: 0;
+    left: 0;
+    background-color: rgb(65, 59, 59);
+    height: 200px;
+  }
+
+  #footerH3{
+    font-family: Arial, Helvetica, sans-serif, Geneva, Tahoma, sans-serif;
+    text-align: center;
+    color: whitesmoke;
+}
+/* CSS DE sudoku.html, és a dir, pàgina del joc */
+
+#form{
+    margin-left: 100px;
+    margin-right: 100px;
+}
+
+legend{
+    padding-bottom: 20px;
+}
+
+.generarJoc{
+    width:120px;
+    height:30px;
+    background:rgb(204, 8, 8);
+    border-radius:10px;
+    color: white;
+    text-align: center;
+    margin-left: 6%;
+    margin-right: 2%;
+}
+
+.opcions{
+    padding: 3px;
+    padding-left: 40px;
+    font-size: 20px;
+
+}
+
+#areaSudoku{
+    height: 500px;
+    width: 500px;
+    margin-left: 22%;
+}
+
+/* CSS de la taula i els seus elements */
+
+#taula{
+    margin-top: 50px ;
+    table-layout: fixed;
+    border: #443 5px solid;
+    width: 444px;
+    height: 444px;
+    background-color: #fdf5f5;
+    vertical-align: middle;
+    text-align: center;
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
+    box-shadow: 0px 0px 0px 1px #bdc3c7;
+    
+}
+td > input{
+    margin: 0px;
+    width: 35px;
+    height: 35px;
+    border-radius: 25%;
+    font-size: 35px;
+    font-family: Helvetica;
+    text-align: center;
+    border: none;
+    background-color: transparent;
+    color: #f1077c;
+}
+
+.interior{
+    box-shadow: 0px 0px 0px 1px #9a9a9b;
+}
+.borDer {
+    box-shadow: 0px 0px 0px 1px #9a9a9b, inset -2px 0 0 #000000;
+}
+.borTop{
+    box-shadow: 0px 0px 0px 1px #9a9a9b, inset 0px -2px 0 0 #000000;
+}
+
+.borBotRig{
+    box-shadow: 0px 0px 0px -3px #9a9a9b, inset -2px 0 0 #000000, inset 0px -2px 0px #000000;
+}
+/* .ocult{
+    display: none;
+} */

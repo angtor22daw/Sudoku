@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="style.css" rel="stylesheet" type="text/css">
+    <title>SUDOKU - Joc</title>
+    <script src="sudoku.js"></script>
+</head>
+<body>
+
+<article>
+    <div class="headerTop">
+    </div>
+    <button class ="inici" onclick="window.location.href='index.html'">Torna a l'inici</button><br><br><br>
+    <div id="pagina">
+
+        <h1>SUDOKU</h1>
+
+        <fieldset id="form">
+            <legend>Selecciona la dificultat: </legend>
+        
+            <div class="opcions">
+              <input type="radio" id="facil" name="dificultat" value="facil" checked>
+              <label>Fàcil</label>
+            </div>
+        
+            <div class="opcions">
+              <input type="radio" id="intermig" name="dificultat" value="intermig">
+              <label>Intermig</label>
+            </div>
+        
+            <div class="opcions"> 
+              <input type="radio" id="dificil" name="dificultat" value="dificil">
+              <label>Difícil</label>
+            </div>
+            <br><br>
+            <button id="començarJoc" class="generarJoc">Generar sudoku</button><br><br><br>
+        </fieldset>
+        <div id="areaSudoku">
+          <!-- <h3 id="mal" class="ocult">Has fallat, torna-ho a provar</h3>
+          <h3 id="bien" class="ocult">FELICITATS, has vençut el sudoku</h3> -->
+        </div>
+    </div>  
+</article>
+<br>
+<footer>
+    <br><br><br><br>
+    <h3 id="footerH3">Fet per Renato Dominguez i Angel Torres</h3>
+</footer>
+</body>
+</html>
