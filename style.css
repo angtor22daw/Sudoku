@@ -1,18 +1,35 @@
 /* CSS DE index.html, és a dir, pàgina d'inici */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box !important;
+}
+
 body{
     background-color: #fdecec;
     height: 100%;
     
 }
 
-article {
+/* article {
     margin: 5em auto 0;
     padding: 1em;
     max-width: 800px;
     background: white;
     border-radius: 1%;
     box-shadow: 0 0 5px 1px rgb(105, 89, 89);
+} */
+article{
+    margin: 5.5em auto 0 auto;
+    /* padding: 1em; */
+    width: 95%;
+    max-width: 800px;
+    min-height: 960px;
+    background: white;
+    border-radius: 1%;
+    box-shadow: 0 0 5px 1px rgb(105, 89, 89);
 }
+
 .headerTop{
     width: 100%;
     top: 0;
@@ -24,13 +41,18 @@ article {
     font-family: "Arial";
     text-align: center;
     color: rgb(255, 255, 255);
-
+}
+#pagina{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 }
 h1 {
     font-family: "Arial";
     text-align: center;
     font-size: 50px;
     color: rgb(0, 0, 0);
+    margin: 2rem;
 }
 
 h2 {
@@ -38,31 +60,23 @@ h2 {
     text-align: center;
     font-size: 25px;
     color: rgb(255, 0, 0);
+    margin-bottom: 1rem;
 }
 
 #descripcio{
     text-align: justify;
-    font-size: 20px;
-    padding: 10px;
-    padding-bottom: 50px;
-    padding-left: 50px;
-    padding-right: 50px;
+    font-size: 1.2rem;
+    /* margin-bottom: 1.5rem; */
+    padding-left: 5rem;
+    padding-right: 5rem;
     color: #000000;
+    /* font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif */
 }
 #imgInici{
-    display:block;
-    margin: auto;
+    width: 50%;
+    margin: 1rem;
 }
 
-.generarJoc{
-    margin: auto;
-    width:150px;
-    height:30px;
-    background:rgb(204, 8, 8);
-    border-radius:10px;
-    color: white;
-    float: center;
-}
 .inici{
     margin: auto;
     align-self: flex-start;
@@ -71,19 +85,23 @@ h2 {
     background:rgb(204, 8, 8);
     border-radius:10px;
     color: white;
-    float: left;
-
 }
 
-.començar{
-    width:150px;
-    height:30px;
+.boton{
+    width:200px;
+    height:40px;
     background:rgb(204, 8, 8);
     border-radius:10px;
     color: white;
-    margin-left: 40%;
+    font-size: 1.1rem;
+    font-weight: 700;
+    margin: 2rem;
+    cursor: pointer;
 }
-
+.boton:hover{
+    opacity: 75%;
+    text-decoration: underline;
+}
 
 p{
     text-align: center;
@@ -109,23 +127,11 @@ footer {
 /* CSS DE sudoku.html, és a dir, pàgina del joc */
 
 #form{
-    margin-left: 100px;
-    margin-right: 100px;
+    width: 70%;
 }
 
 legend{
     padding-bottom: 20px;
-}
-
-.generarJoc{
-    width:120px;
-    height:30px;
-    background:rgb(204, 8, 8);
-    border-radius:10px;
-    color: white;
-    text-align: center;
-    margin-left: 6%;
-    margin-right: 2%;
 }
 
 .opcions{
@@ -137,8 +143,8 @@ legend{
 
 #areaSudoku{
     height: 500px;
-    width: 500px;
-    margin-left: 22%;
+    margin: 1rem;
+    /* margin-left: 22%; */
 }
 
 /* CSS de la taula i els seus elements */
@@ -159,9 +165,8 @@ legend{
 }
 td > input{
     margin: 0px;
-    width: 35px;
-    height: 35px;
-    border-radius: 25%;
+    width: 100%;
+    height: 100%;
     font-size: 35px;
     font-family: Helvetica;
     text-align: center;
@@ -170,18 +175,29 @@ td > input{
     color: #f1077c;
 }
 
-.interior{
-    box-shadow: 0px 0px 0px 1px #9a9a9b;
-}
-.borDer {
-    box-shadow: 0px 0px 0px 1px #9a9a9b, inset -2px 0 0 #000000;
-}
-.borTop{
-    box-shadow: 0px 0px 0px 1px #9a9a9b, inset 0px -2px 0 0 #000000;
+#taula{
+    border-collapse: collapse;
+    /* width: 100%; */
 }
 
-.borBotRig{
-    box-shadow: 0px 0px 0px -3px #9a9a9b, inset -2px 0 0 #000000, inset 0px -2px 0px #000000;
+#taula td {
+    border: 1px solid #000;
+    text-align: center;
+    width: 11.11%;
+    height: 50px; 
+}
+
+#taula td:nth-child(3n) {
+    border-right: 3px solid #000;
+}
+
+#taula td:nth-child(3n + 1) {
+    border-left: 3px solid red;
+}
+
+
+#taula tr:nth-child(3n+2) td {
+    border-top: 3px solid #000;
 }
 /* .ocult{
     display: none;

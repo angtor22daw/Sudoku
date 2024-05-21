@@ -92,7 +92,7 @@ function generarSudoku() {
         var button = document.createElement('button');
         button.type = "button";
         button.innerText = 'Comprovar';
-        button.classList = "generarJoc";
+        button.classList = "boton generarJoc";
         button.id='comprovarResultat';
         jugar.appendChild(button);
     }
@@ -166,22 +166,6 @@ function generarTaula(taulaDif, arraySolucio){
 
             td.appendChild(input);
             tr.appendChild(td);
-
-            //clase CSS a tots els td de la taula per crear graella 9x9
-            td.className = 'interior';
-
-           //clase CSS de linia vertical que separa els quadrats 3x3
-            if(y == 2 || y == 5){
-                td.className = 'borDer';
-            }
-            //clase CSS de linia horitzontal que separa els quadrats 3x3
-            if(x == 2 || x == 5){
-                td.className = 'borTop';
-            }
-            //clase CSS que uneix les bores dels 3x3 centrals
-            if ( (x == 2 || x == 5) && (y == 2 || y == 5) ){
-                td.className = 'borBotRig';
-            }
 
             //Seleccionar fila i columna dinamicament al clicar
             input.addEventListener('click', function(){
