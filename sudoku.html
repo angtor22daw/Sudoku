@@ -4,8 +4,10 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href="./ico.png" type="image/x-icon">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500&display=swap" rel="stylesheet">
     <link href="style.css" rel="stylesheet" type="text/css">
-    <title>SUDOKU - Joc</title>
+    <title>SUDOKU - Juego</title>
     <script src="sudoku.js"></script>
 </head>
 <body>
@@ -13,20 +15,20 @@
 <article>
     <div class="headerTop">
     </div>
-    <button class ="boton inici" onclick="window.location.href='index.html'">Torna a l'inici</button>
+    <button class ="boton inici" onclick="window.location.href='index.html'">Volver a inicio</button>
     <div id="pagina">
         <h1>SUDOKU</h1>
         <fieldset id="form">
-            <legend>Selecciona la dificultat: </legend>
+            <legend>Selecciona la dificultad: </legend>
         
             <div class="opcions">
               <input type="radio" id="facil" name="dificultat" value="facil" checked>
-              <label>Fàcil</label>
+              <label>Fácil</label>
             </div>
         
             <div class="opcions">
               <input type="radio" id="intermig" name="dificultat" value="intermig">
-              <label>Intermig</label>
+              <label>Intermedia</label>
             </div>
         
             <div class="opcions"> 
@@ -36,15 +38,13 @@
             <button id="començarJoc" class="boton generarJoc">Generar sudoku</button>
         </fieldset>
         <div id="areaSudoku">
-          <!-- <h3 id="mal" class="ocult">Has fallat, torna-ho a provar</h3>
-          <h3 id="bien" class="ocult">FELICITATS, has vençut el sudoku</h3> -->
         </div>
     </div>  
 </article>
 <br>
 <footer>
     <br><br><br><br>
-    <h3 id="footerH3">Fet per Renato Dominguez i Angel Torres</h3>
+    <h3 id="footerH3">Hecho por Renato Dominguez y Angel Torres</h3>
 </footer>
 </body>
 </html>

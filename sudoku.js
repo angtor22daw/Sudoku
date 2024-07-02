@@ -91,7 +91,7 @@ function generarSudoku() {
     if(!document.getElementById( "comprovarResultat" )){
         var button = document.createElement('button');
         button.type = "button";
-        button.innerText = 'Comprovar';
+        button.innerText = 'Comprobar resultado';
         button.classList = "boton generarJoc";
         button.id='comprovarResultat';
         jugar.appendChild(button);

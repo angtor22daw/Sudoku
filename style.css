@@ -8,7 +8,7 @@
 body{
     background-color: #fdecec;
     height: 100%;
-    
+    font-family: 'Roboto';
 }
 
 /* article {
@@ -37,10 +37,8 @@ article{
     height: 70px;
     position: fixed;
     background: rgb(204, 8, 8);
-    font-size: 50px;
-    font-family: "Arial";
-    text-align: center;
-    color: rgb(255, 255, 255);
+    z-index: 1;
+    box-shadow: 0px 0px 4px 0px rgb(204 8 8);
 }
 #pagina{
     display: flex;
@@ -48,7 +46,6 @@ article{
     align-items: center;
 }
 h1 {
-    font-family: "Arial";
     text-align: center;
     font-size: 50px;
     color: rgb(0, 0, 0);
@@ -56,21 +53,20 @@ h1 {
 }
 
 h2 {
-    font-family: "Courier";
+    font-weight: 500;
     text-align: center;
-    font-size: 25px;
+    font-size: 1.4em;
     color: rgb(255, 0, 0);
     margin-bottom: 1rem;
 }
 
 #descripcio{
+    font-weight: 500;
+    line-height: 1.5;
     text-align: justify;
-    font-size: 1.2rem;
-    /* margin-bottom: 1.5rem; */
-    padding-left: 5rem;
-    padding-right: 5rem;
-    color: #000000;
-    /* font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif */
+    font-size: 1.2em;
+    margin: 1.5em 3.5em 0;
+    color: #313131;
 }
 #imgInici{
     width: 50%;
@@ -93,7 +89,7 @@ h2 {
     background:rgb(204, 8, 8);
     border-radius:10px;
     color: white;
-    font-size: 1.1rem;
+    font-size: 1.05rem;
     font-weight: 700;
     margin: 2rem;
     cursor: pointer;
@@ -120,7 +116,7 @@ footer {
   }
 
   #footerH3{
-    font-family: Arial, Helvetica, sans-serif, Geneva, Tahoma, sans-serif;
+    font-weight: 400;
     text-align: center;
     color: whitesmoke;
 }
@@ -141,29 +137,45 @@ legend{
 
 }
 
-#areaSudoku{
-    height: 500px;
-    margin: 1rem;
-    /* margin-left: 22%; */
-}
 
 /* CSS de la taula i els seus elements */
 
-#taula{
-    margin-top: 50px ;
-    table-layout: fixed;
-    border: #443 5px solid;
-    width: 444px;
-    height: 444px;
+
+#areaSudoku {
+    width: 90%;
+    max-width: 500px;
+    position: relative;
+    margin: 50px;
+}
+
+#areaSudoku::before {
+    content: "";
+    display: block;
+    padding-top: 100%; /* Relación de aspecto 1:1 */
+}
+
+#taula {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    border: 5px solid #443;
     background-color: #fdf5f5;
-    vertical-align: middle;
-    text-align: center;
-    -webkit-box-sizing: border-box;
     box-sizing: border-box;
     box-shadow: 0px 0px 0px 1px #bdc3c7;
-    
+    border-collapse: collapse;
+    table-layout: fixed;
 }
-td > input{
+
+#taula td {
+    border: 1px solid #000;
+    text-align: center;
+    width: 11.11%;
+    height: 11.11%; /* Hacemos las celdas cuadradas */
+}
+
+td > input {
     margin: 0px;
     width: 100%;
     height: 100%;
@@ -173,18 +185,6 @@ td > input{
     border: none;
     background-color: transparent;
     color: #f1077c;
-}
-
-#taula{
-    border-collapse: collapse;
-    /* width: 100%; */
-}
-
-#taula td {
-    border: 1px solid #000;
-    text-align: center;
-    width: 11.11%;
-    height: 50px; 
 }
 
 #taula td:nth-child(3n) {
@@ -202,3 +202,22 @@ td > input{
 /* .ocult{
     display: none;
 } */
+
+@media (max-width: 600px) {
+    #descripcio{
+        margin: 1.5em 1.5em 0;
+        text-align: justify;
+        font-size: 1.05em;
+    }
+    #imgInici {
+        width: 80%;
+    } 
+}
+@media (max-width: 500px) {
+    #areaSudoku{
+        padding: 30px;
+    }
+    td > input {
+        font-size: 25px;
+    }
+}
